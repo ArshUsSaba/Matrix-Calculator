@@ -1,0 +1,230 @@
+:root {
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-light: #666666;
+    --border-color: #cccccc;
+    --primary-color: #2c3e50;
+    --secondary-color: #e0e0e0;
+    --error-color: #d32f2f;
+    --btn-hover: #34495e;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e1e4e8;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+}
+
+header p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+}
+
+.matrix-sections {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.matrix-container {
+    flex: 1;
+    min-width: 280px;
+    background: #fcfcfc;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.matrix-container h3 {
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 10px;
+}
+
+.dim-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.dim-controls input {
+    width: 45px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.matrix-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    overflow-x: auto;
+    padding: 5px;
+}
+
+.matrix-row {
+    display: flex;
+    gap: 5px;
+}
+
+.matrix-input {
+    width: 50px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.action-section {
+    text-align: center;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-hover);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-main);
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn-secondary:hover {
+    background-color: #d5d5d5;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eef2f5;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.result-box h3 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.error-text {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.result-matrix-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.result-cell {
+    padding: 8px 12px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    font-family: monospace;
+    min-width: 40px;
+}
+
+.result-scalar {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .matrix-sections {
+        flex-direction: column;
+    }
+}

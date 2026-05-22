@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Matrix Calculator</h1>
+            <p>A simple tool for basic linear algebra operations.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="operation">Operation:</label>
+                    <select id="operation">
+                        <option value="add">Addition (A + B)</option>
+                        <option value="subtract">Subtraction (A - B)</option>
+                        <option value="multiply">Multiplication (A × B)</option>
+                        <option value="transpose">Transpose (Aᵀ)</option>
+                        <option value="determinant">Determinant |A|</option>
+                        <option value="inverse">Inverse (A⁻¹)</option>
+                        <option value="trace">Trace tr(A)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="matrix-sections">
+                <div class="matrix-container" id="matrix-a-container">
+                    <h3>Matrix A</h3>
+                    <div class="dim-controls">
+                        <input type="number" id="rows-a" value="2" min="1" max="10">
+                        <span>×</span>
+                        <input type="number" id="cols-a" value="2" min="1" max="10">
+                        <button class="btn-secondary" onclick="generateMatrix('a')">Set Size</button>
+                    </div>
+                    <div id="matrix-a-inputs" class="matrix-grid"></div>
+                </div>
+
+                <div class="matrix-container" id="matrix-b-container">
+                    <h3>Matrix B</h3>
+                    <div class="dim-controls">
+                        <input type="number" id="rows-b" value="2" min="1" max="10">
+                        <span>×</span>
+                        <input type="number" id="cols-b" value="2" min="1" max="10">
+                        <button class="btn-secondary" onclick="generateMatrix('b')">Set Size</button>
+                    </div>
+                    <div id="matrix-b-inputs" class="matrix-grid"></div>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button class="btn-primary" id="calculate-btn">Calculate</button>
+                <button class="btn-secondary" id="clear-btn">Clear All</button>
+            </div>
+
+            <div id="result-container" class="result-box hidden">
+                <h3>Result</h3>
+                <div id="error-message" class="error-text"></div>
+                <div id="result-output"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Built with Flask & Vanilla JS</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
