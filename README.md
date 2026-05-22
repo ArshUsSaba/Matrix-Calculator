@@ -121,7 +121,7 @@ As I continue to learn, I plan to add the following features:
 
 ## 🤝 Let's Connect
 I'm a B.Tech CSE student actively learning and building cool projects. Feel free to reach out, share feedback, or check out my other work!
-- **GitHub**: [@your-username](https://github.com/ArshUsSaba)
-- **LinkedIn**: [Your Name](https://linkedin.com/in/arsh-us-saba)
+- **GitHub**: [@ArshUsSaba](https://github.com/ArshUsSaba)
+- **LinkedIn**: [Arsh Us Saba](https://linkedin.com/in/arsh-us-saba)
 
 *If you found this project helpful or interesting, please consider giving it a ⭐ on GitHub!*
